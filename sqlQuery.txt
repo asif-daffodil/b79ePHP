@@ -1,0 +1,18 @@
+Database
+table
+column
+
+-> row wise insert data
+
+INSERT INTO teachers (name, gender) VALUES ("Sifat", "Male");
+
+SELECT * FROM teachers
+SELECT * FROM teachers WHERE name = "Abdul"
+SELECT * FROM teachers WHERE gender = "Male";
+SELECT * FROM `teachers` WHERE `name` = "Babul" AND `gender` = "Male"
+SELECT name, gender FROM teachers
+UPDATE teachers SET name = "Hopeless" WHERE id = 6 
+UPDATE teachers SET name = "Toothless", gender = "Female" WHERE id = 6
+DELETE FROM `teachers` WHERE `id` = 5
+
+mysqli_connect("localhost", "Root", "", "b79e")
