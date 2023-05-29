@@ -5,13 +5,27 @@
             <span class="ml-3 text-xl">Healthy Life</span>
         </a>
         <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
-            <a class="mr-5 hover:text-gray-900" href="./">Home</a>
-            <a class="mr-5 hover:text-gray-900" href="./about">About</a>
-            <a class="mr-5 hover:text-gray-900" href="./contact">Contact</a>
-            <a class="mr-5 hover:text-gray-900" href="blog">Blog</a>
-            <a class="mr-5 hover:text-gray-900" href="signin">Sign In</a>
-            <a class="mr-5 hover:text-gray-900" href="signup">Sign Up</a>
-            <a class="mr-5 hover:text-gray-900" href="signout">Sign Out</a>
+            <?php if (!isset($_SESSION['user'])) { ?>
+                <a class="mr-5 hover:text-gray-900" href="signin">Sign In</a>
+                <a class="mr-5 hover:text-gray-900" href="signup">Sign Up</a>
+            <?php } else { ?>
+                <a class="mr-5 hover:text-gray-900" href="./">Home</a>
+                <a class="mr-5 hover:text-gray-900" href="./about">About</a>
+                <a class="mr-5 hover:text-gray-900" href="./contact">Contact</a>
+                <a class="mr-5 hover:text-gray-900" href="blog">Blog</a>
+                <div class="dropdown dropdown-end">
+                    <label tabindex="0" class="mr-5 cursor-pointer">
+                        <img class="w-6 inline-block" src="./images/users/<?= !empty($_SESSION['user']['img']) ? $_SESSION['user']['img'] : 'default.jpg' ?>" alt="">
+                        <?= $_SESSION['user']['name'] ?>
+                        <i class="fa-solid fa-caret-down"></i>
+                    </label>
+                    <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a>Update Profile</a></li>
+                        <li><a>Change Pasword</a></li>
+                        <li><a class="hover:text-gray-900" href="signout">Sign Out</a></li>
+                    </ul>
+                </div>
+            <?php } ?>
 
         </nav>
         <a class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0" href="#">

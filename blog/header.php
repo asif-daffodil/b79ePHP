@@ -1,7 +1,15 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "blog79");
+include_once("./db.php");
 
 session_start();
+
+function safuda($data)
+{
+    $data = htmlspecialchars($data);
+    $data = trim($data);
+    $data = stripslashes($data);
+    return $data;
+}
 ?>
 
 <!DOCTYPE html>
