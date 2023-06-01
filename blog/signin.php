@@ -64,7 +64,7 @@ if (isset($_POST['sp123'])) {
                     <?= $errPass ?? null ?>
                 </div>
                 <div class=" text-center mt-7">
-                    <button class="uppercase px-24 md:px-[118px] lg:px-[140px] py-2 rounded-md text-white bg-violet-500 hover:bg-violet-600  font-medium " name="sp123">Sign Up</button>
+                    <button class="uppercase px-24 md:px-[118px] lg:px-[140px] py-2 rounded-md text-white bg-violet-500 hover:bg-violet-600  font-medium " name="sp123">Sign In</button>
                 </div>
             </div>
         </form>

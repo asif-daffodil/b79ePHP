@@ -1,5 +1,27 @@
 <?php
 include_once("./header.php");
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = $_SESSION['user']['name'];
+    $email = $_SESSION['user']['email'];
+    $message = safuda($_POST['message']);
+
+    if (!empty($name) && !empty($email) && !empty($message)) {
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $name = $conn->real_escape_string($name);
+            $email = $conn->real_escape_string($email);
+            $message = $conn->real_escape_string($message);
+            $insertQuery = "INSERT INTO `contact` (`name`,`email`,`message`) VALUES ('$name', '$email', '$message')";
+            $insert = $conn->query($insertQuery);
+            if (!$insert) {
+                echo "<script>toastr.warning('Something Went Wrong!')</script>";
+            } else {
+                echo "<script>toastr.success('Thank you for your message!', 'Messaage sent', {progressBar: true, timeOut: 2000}); setTimeout(()=>location.href='./contact',2000)</script>";
+            }
+        }
+    }
+}
+
 ?>
 <section class="text-gray-600 body-font relative">
     <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
@@ -23,19 +45,21 @@ include_once("./header.php");
         <div class="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
             <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Feedback</h2>
             <p class="leading-relaxed mb-5 text-gray-600">Send us your message</p>
-            <div class="relative mb-4">
-                <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
-                <input type="text" id="name" name="name" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-            </div>
-            <div class="relative mb-4">
-                <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
-                <input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
-            </div>
-            <div class="relative mb-4">
-                <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
-                <textarea id="message" name="message" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"></textarea>
-            </div>
-            <button class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Send Message</button>
+            <form action="" method="post">
+                <div class="relative mb-4">
+                    <label for="name" class="leading-7 text-sm text-gray-600">Name</label>
+                    <input type="text" id="name" name="name" class="w-full bg-gray-300 rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" require value="<?= $_SESSION['user']['name'] ?>" disabled>
+                </div>
+                <div class="relative mb-4">
+                    <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+                    <input type="email" id="email" name="email" class="w-full bg-gray-300 rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" require value="<?= $_SESSION['user']['email'] ?>" disabled>
+                </div>
+                <div class="relative mb-4">
+                    <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+                    <textarea id="message" name="message" class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out" require></textarea>
+                </div>
+                <button class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" type="submit">Send Message</button>
+            </form>
             <p class="text-xs text-gray-500 mt-3">We will contact with you as soon sas possible if require</p>
         </div>
     </div>

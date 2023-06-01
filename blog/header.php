@@ -22,8 +22,10 @@ function safuda($data)
     <title>Document</title>
     <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="./node_modules/daisyui/dist/full.css">
+    <link rel="stylesheet" href="./node_modules/toastr/build/toastr.min.css">
     <link rel="stylesheet" href="./dist/output.css">
-
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/toastr/toastr.js"></script>
 </head>
 
 <body>

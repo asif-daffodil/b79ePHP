@@ -2985,6 +2985,10 @@ html {
   cursor: auto;
 }
 
+.menu > :where(li.\!disabled > *:not(ul):focus) {
+  cursor: auto !important;
+}
+
 .menu > :where(li) :where(ul) {
   display: flex;
   flex-direction: column;
@@ -3940,6 +3944,16 @@ html {
   --tw-bg-opacity: 0.1;
   color: hsl(var(--bc) / var(--tw-text-opacity));
   --tw-text-opacity: 0.2;
+}
+
+.btm-nav>*.\!disabled,
+    .btm-nav>*.\!disabled:hover {
+  pointer-events: none !important;
+  --tw-border-opacity: 0 !important;
+  background-color: hsl(var(--n) / var(--tw-bg-opacity)) !important;
+  --tw-bg-opacity: 0.1 !important;
+  color: hsl(var(--bc) / var(--tw-text-opacity)) !important;
+  --tw-text-opacity: 0.2 !important;
 }
 
 .btm-nav>* .label {
@@ -5487,8 +5501,20 @@ html {
   --tw-text-opacity: 0.2;
 }
 
+.menu li.\!disabled > * {
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+          user-select: none !important;
+  color: hsl(var(--bc) / var(--tw-text-opacity)) !important;
+  --tw-text-opacity: 0.2 !important;
+}
+
 .menu li.disabled > *:hover {
   background-color: transparent;
+}
+
+.menu li.\!disabled > *:hover {
+  background-color: transparent !important;
 }
 
 .menu li.hover-bordered a {
@@ -8442,6 +8468,50 @@ html {
   inset-inline-end: 0.25rem;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
+.left-0 {
+  left: 0px;
+}
+
+.bottom-1 {
+  bottom: 0.25rem;
+}
+
+.bottom-1\.5 {
+  bottom: 0.375rem;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.bottom-\[-16px\] {
+  bottom: -16px;
+}
+
+.bottom-\[-20px\] {
+  bottom: -20px;
+}
+
+.left-\[16px\] {
+  left: 16px;
+}
+
+.bottom-\[-22px\] {
+  bottom: -22px;
+}
+
+.bottom-\[-18px\] {
+  bottom: -18px;
+}
+
+.bottom-\[-14px\] {
+  bottom: -14px;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -8508,9 +8578,19 @@ html {
   margin-bottom: 0.75rem;
 }
 
+.my-5 {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
 .my-6 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+.mx-3 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
 }
 
 .mb-1 {
@@ -8603,6 +8683,18 @@ html {
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.mr-3 {
+  margin-right: 0.75rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-9 {
+  margin-bottom: 2.25rem;
 }
 
 .box-border {
@@ -8700,6 +8792,10 @@ html {
   display: list-item;
 }
 
+.\!hidden {
+  display: none !important;
+}
+
 .hidden {
   display: none;
 }
@@ -8760,8 +8856,50 @@ html {
   width: 100%;
 }
 
+.w-36 {
+  width: 9rem;
+}
+
+.w-96 {
+  width: 24rem;
+}
+
+.w-72 {
+  width: 18rem;
+}
+
+.w-max {
+  width: -moz-max-content;
+  width: max-content;
+}
+
 .max-w-7xl {
   max-width: 80rem;
+}
+
+.max-w-max {
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+
+.max-w-xs {
+  max-width: 20rem;
+}
+
+.max-w-sm {
+  max-width: 24rem;
+}
+
+.max-w-md {
+  max-width: 28rem;
+}
+
+.max-w-\[100px\] {
+  max-width: 100px;
+}
+
+.max-w-\[150px\] {
+  max-width: 150px;
 }
 
 .flex-shrink {
@@ -9114,6 +9252,10 @@ html {
   grid-auto-flow: column dense;
 }
 
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -9296,6 +9438,10 @@ html {
 
 .justify-items-stretch {
   justify-items: stretch;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -9792,6 +9938,11 @@ html {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-red-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
 }
 
 .bg-opacity-50 {
@@ -10476,6 +10627,11 @@ html {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+.\!invert {
+  --tw-invert: invert(100%) !important;
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow) !important;
+}
+
 .invert {
   --tw-invert: invert(100%);
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
@@ -10830,6 +10986,10 @@ html {
 
   .md\:w-72 {
     width: 18rem;
+  }
+
+  .md\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .md\:flex-row {

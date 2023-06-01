@@ -20,7 +20,7 @@
                         <i class="fa-solid fa-caret-down"></i>
                     </label>
                     <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-                        <li><a>Update Profile</a></li>
+                        <li><a href="./updateprofile">Update Profile</a></li>
                         <li><a>Change Pasword</a></li>
                         <li><a class="hover:text-gray-900" href="signout">Sign Out</a></li>
                     </ul>
