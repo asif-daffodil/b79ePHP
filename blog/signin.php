@@ -34,7 +34,7 @@ if (isset($_POST['sp123'])) {
             $loginMsg = "<div class='alert alert-success md:w-72 lg:w-[340px] mx-auto mb-3'>login successfull!</div>";
             $email = $pass = $crrEmail = $crrPass = null;
             $userData = $check->fetch_object();
-            $_SESSION['user'] = ['name' => $userData->name, 'email' => $userData->email, 'img' => $userData->img, 'gender' => $userData->gender, 'city' => $userData->city, 'country' => $userData->country, 'phone' => $userData->phone, 'role' => $userData->role];
+            $_SESSION['user'] = ['id' => $userData->id, 'name' => $userData->name, 'email' => $userData->email, 'img' => $userData->img, 'gender' => $userData->gender, 'city' => $userData->city, 'country' => $userData->country, 'phone' => $userData->phone, 'role' => $userData->role];
             echo "
             <script>
                 setTimeout(()=>{
