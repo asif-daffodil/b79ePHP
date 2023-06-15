@@ -22,6 +22,9 @@
                     <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                         <li><a href="./updateprofile">Update Profile</a></li>
                         <li><a href="./changepass">Change Pasword</a></li>
+                        <?php if (isset($_SESSION['user']['role']) && $_SESSION['user']['role'] == 'admin') { ?>
+                            <li><a href="./admin/dashboard">Admin Pannel</a></li>
+                        <?php } ?>
                         <li><a class="hover:text-gray-900" href="signout">Sign Out</a></li>
                     </ul>
                 </div>
