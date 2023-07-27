@@ -37,5 +37,4 @@
             break;
     }
 
-    echo rand(2, 9);
-?>
+    echo  rand(2, 9);
