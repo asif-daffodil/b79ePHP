@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table plugin | Trumbowyg</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body class="documentation-body">
+<div class="main main-demo-inner">
+    <section class="wrapper section">
+        <h2 class="section-title">Table plugin</h2>
+
+        <div class="feature">
+            <h3>Basic usage</h3>
+            <p>
+                This plugin allows you to add and manage a table.
+            </p>
+
+            <a href="../../documentation/plugins/#plugin-table" class="button button-demo">Read table plugin documentation</a>
+
+            <div id="editor">
+                <h4>Add a table to the editor</h4>
+                <p>
+                    Below is an example of a simple table with a header row.
+                </p>
+                <table>
+                    <thead>
+                    <tr>
+                        <th scope="col">Project & Pitch</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Technologies</th>
+                        <th scope="col">Stars</th>
+                        <th scope="col">Downloads</th>
+                        <th scope="col">URL</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><strong>Trumbowyg</strong> <br> Lightweight WYSIWYG Editor</td>
+                        <td>Active</td>
+                        <td>JavaScript</td>
+                        <td>~4&nbsp;000&nbsp;★</td>
+                        <td>70&nbsp;000&nbsp;/&nbsp;month</td>
+                        <td>
+                            <a href="https://alex-d.github.io/Trumbowyg/">Landing</a> <br>
+                            <a href="https://github.com/Alex-D/Trumbowyg/">GitHub</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Monitoror</strong> <br> Unified monitoring wallboard</td>
+                        <td>Maintenance</td>
+                        <td>Go <br> Vue</td>
+                        <td>~4&nbsp;000&nbsp;★</td>
+                        <td>100&nbsp;000&nbsp;+</td>
+                        <td>
+                            <a href="https://monitoror.com">Landing</a> <br>
+                            <a href="https://github.com/monitoror/monitoror/">GitHub</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cookies EU Banner</strong> <br> 1kb vanilla JS for cookie banner</td>
+                        <td>Maintenance</td>
+                        <td>JavaScript</td>
+                        <td>~420&nbsp;★</td>
+                        <td>4&nbsp;000&nbsp;/&nbsp;month</td>
+                        <td>
+                            <a href="https://alex-d.github.io/Cookies-EU-banner/">Landing</a> <br>
+                            <a href="https://github.com/Alex-D/Cookies-EU-banner">GitHub</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Colllect</strong> <br> Bookmark Manager for Creatives</td>
+                        <td>Paused</td>
+                        <td>Symfony <br> Vue</td>
+                        <td>~340&nbsp;★</td>
+                        <td></td>
+                        <td>
+                            <a href="https://colllect.io">Landing</a> <br>
+                            <a href="https://github.com/Colllect/Colllect">GitHub</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Check Disk Space</strong> <br> Multi-platform disk space checker for Node.js</td>
+                        <td>Maintenance</td>
+                        <td>TypeScript</td>
+                        <td>~78&nbsp;★</td>
+                        <td>2&nbsp;000&nbsp;000&nbsp;/&nbsp;month</td>
+                        <td>
+                            <a href="https://github.com/Alex-D/check-disk-space">GitHub</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Column View</strong> <br> Multi-columns page viewer</td>
+                        <td>Maintenance</td>
+                        <td>TypeScript <br> Snabbdom</td>
+                        <td>~7&nbsp;★</td>
+                        <td></td>
+                        <td>
+                            <a href="https://column-view.com">Landing</a> <br>
+                            <a href="https://github.com/Alex-D/Column-View/">GitHub</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <hr>
+                <h4>Tables with merged cells</h4>
+                <p>
+                    Example of a pricing table.
+                </p>
+                <table>
+                    <thead>
+                    <tr>
+                        <th scope="col">Feature</th>
+                        <th scope="col">Free</th>
+                        <th scope="col">Premium</th>
+                        <th scope="col">Business</th>
+                        <th scope="col">Enterprise</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Price</td>
+                        <td>Free</td>
+                        <td>5,99€ / user</td>
+                        <td>12,99€ / user</td>
+                        <td>22,99€ / user</td>
+                    </tr>
+                    <tr>
+                        <td>Users</td>
+                        <td>1</td>
+                        <td rowspan="3" colspan="2" style="text-align: center;">Unlimited</td>
+                        <td>20 users minimum</td>
+                    </tr>
+                    <tr>
+                        <td>Items</td>
+                        <td>100</td>
+                        <td>Unlimited</td>
+                    </tr>
+                    <tr>
+                        <td>Bandwidth</td>
+                        <td>5&nbsp;Mbps</td>
+                        <td>On your charge</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <p>
+                    Another tab with different merged cells:
+                </p>
+                <table>
+                    <tbody>
+                    <tr>
+                        <td>Those plugins allow you to merge cells</td>
+                        <td>And also unmerge</td>
+                        <td colspan="2">Two cells merged</td>
+                    </tr>
+                    <tr>
+                        <td>You can see some examples on this page</td>
+                        <td colspan="2">Two horizontally merged too</td>
+                        <td>Simple cell</td>
+                    </tr>
+                    <tr>
+                        <td>Upload image</td>
+                        <td>Pick, upload, and inserts an image</td>
+                        <td>Next is empty</td>
+                        <td></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>The code</h3>
+            <pre><code class="js-code-to-eval javascript">
+$('#editor')
+.trumbowyg({
+    btns: [['table'], ['tableCellBackgroundColor', 'tableBorderColor']]
+});
+            </code></pre>
+        </div>
+
+        <div class="feature">
+            <h3>Setup</h3>
+
+            <h4>In head tag</h4>
+            <pre><code class="html loading-head">
+            </code></pre>
+            <h4>At the end of body</h4>
+            <pre><code class="html loading-body">
+&lt;!-- Import jQuery -->
+&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">&lt;/script>
+&lt;script>window.jQuery || document.write('&lt;script src="js/vendor/jquery-3.3.1.min.js">&lt;\/script>')&lt;/script>
+            </code></pre>
+        </div>
+    </section>
+</div>
+
+
+<!-- Import jQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+
+<!-- DO NOT COPY THESE LINES IN YOUR PROJECT, THEY ARE THERE JUST FOR THE EXAMPLE PAGE PURPOSE -->
+<script src="../js/loader.js"></script>
+<script>
+    loadStyle('dist/ui/trumbowyg.min.css');
+    loadStyle('dist/plugins/table/ui/trumbowyg.table.min.css', 'Import table plugin specific stylesheet');
+    loadScript('dist/trumbowyg.min.js', 'Import Trumbowyg');
+    loadScript('dist/plugins/table/trumbowyg.table.min.js', 'Import all plugins you want AFTER importing jQuery and Trumbowyg');
+</script>
+<script src="../js/runExampleCode.js"></script>
+<script src="../js/highlight.js"></script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "trumbowyg-github-page",
+  "private": true,
+  "author": {
+    "name": "Alexandre Demode (Alex-D)",
+    "email": "contact@alex-d.fr",
+    "url": "https://alex-d.fr"
+  },
+  "license": "MIT",
+  "scripts": {
+    "dev": "gulp",
+    "clean": "gulp clean",
+    "build": "gulp build"
+  },
+  "volta": {
+    "node": "18.12.1",
+    "npm": "9.3.0"
+  }
+}

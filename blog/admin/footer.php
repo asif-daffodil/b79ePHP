@@ -39,8 +39,16 @@
            </div>
 
            <!-- Bootstrap core JavaScript-->
-           <script src="vendor/jquery/jquery.min.js"></script>
            <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+           <!-- data table -->
+           <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+           <script>
+               let table = new DataTable('#myTable', {
+                   "pageLength": 5,
+                   "lengthMenu": [5, 10, 15, 20]
+               });
+           </script>
 
            <!-- Core plugin JavaScript-->
            <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
@@ -49,11 +57,11 @@
            <script src="js/sb-admin-2.min.js"></script>
 
            <!-- Page level plugins -->
-           <script src="vendor/chart.js/Chart.min.js"></script>
+           <!-- <script src="vendor/chart.js/Chart.min.js"></script> -->
 
            <!-- Page level custom scripts -->
-           <script src="js/demo/chart-area-demo.js"></script>
-           <script src="js/demo/chart-pie-demo.js"></script>
+           <!-- <script src="js/demo/chart-area-demo.js"></script> -->
+           <!-- <script src="js/demo/chart-pie-demo.js"></script> -->
 
            </body>
 

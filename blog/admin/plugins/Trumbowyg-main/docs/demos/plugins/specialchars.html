@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Special chars plugin | Trumbowyg</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../../css/main.css">
+</head>
+<body class="documentation-body">
+<div class="main main-demo-inner">
+    <section class="wrapper section">
+        <h2 class="section-title">Special chars plugin</h2>
+
+        <div class="feature">
+            <h3>Basic usage</h3>
+            <p>
+                This plugin allow you to add a picker for special character in Trumbowyg.
+            </p>
+
+            <a href="../../documentation/plugins/#plugin-specialchars" class="button button-demo">Read special chars plugin documentation</a>
+
+            <div id="editor">
+                <h2>Select a character!</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, aliquam, minima fugiat placeat provident
+                    optio nam reiciendis eius beatae quibusdam!
+                </p>
+            </div>
+
+            <h4>The code</h4>
+            <pre><code class="js-code-to-eval javascript">
+$('#editor')
+.trumbowyg({
+    btns: [
+        ['specialChars']
+    ]
+});
+            </code></pre>
+        </div>
+
+        <div class="feature">
+            <h3>Custom char list</h3>
+
+            <div id="editor-custom-list">
+                <h2>Select a character!</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, aliquam, minima fugiat placeat provident
+                    optio nam reiciendis eius beatae quibusdam!
+                </p>
+            </div>
+
+            <h4>The code</h4>
+            <pre><code class="js-code-to-eval javascript">
+$('#editor-custom-list')
+.trumbowyg({
+    btns: [
+        ['specialChars']
+    ],
+    plugins: {
+        specialchars: {
+            symbolList: [
+                '00A2', '00A5', '00A4', '2030',  null,
+                '00A9', '00AE',  '2122',  null,
+                '2023', '25B6', '2B29', '25C6', null,
+                '2211', '2243', '2264', '2265'
+ 		    ]
+        }
+    }
+});
+            </code></pre>
+        </div>
+
+        <div class="feature">
+            <h3>Setup</h3>
+
+            <h4>In head tag</h4>
+            <pre><code class="html loading-head">
+            </code></pre>
+            <h4>At the end of body</h4>
+            <pre><code class="html loading-body">
+&lt;!-- Import jQuery -->
+&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">&lt;/script>
+&lt;script>window.jQuery || document.write('&lt;script src="js/vendor/jquery-3.3.1.min.js">&lt;\/script>')&lt;/script>
+            </code></pre>
+        </div>
+    </section>
+</div>
+
+
+<!-- Import jQuery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../../js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+
+<!-- DO NOT COPY THESE LINES IN YOUR PROJECT, THEY ARE THERE JUST FOR THE EXAMPLE PAGE PURPOSE -->
+<script src="../js/loader.js"></script>
+<script>
+    loadStyle('dist/ui/trumbowyg.min.css');
+    loadStyle('dist/plugins/specialchars/ui/trumbowyg.specialchars.min.css', 'Import special chars plugin specific stylesheet');
+    loadScript('dist/trumbowyg.min.js', 'Import Trumbowyg');
+    loadScript('dist/plugins/specialchars/trumbowyg.specialchars.min.js', 'Import all plugins you want AFTER importing jQuery and Trumbowyg');
+</script>
+<script src="../js/runExampleCode.js"></script>
+<script src="../js/highlight.js"></script>
+</body>
+</html>

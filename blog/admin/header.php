@@ -1,5 +1,14 @@
 <?php
 session_start();
+$pageName = pathinfo($_SERVER['PHP_SELF'], PATHINFO_FILENAME);
+$conn = mysqli_connect("localhost", "root", "", "blog79");
+function safuda($data)
+{
+    $data = htmlspecialchars($data);
+    $data = trim($data);
+    stripslashes($data);
+    return $data;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +29,10 @@ session_start();
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 </head>
 
 <body id="page-top">

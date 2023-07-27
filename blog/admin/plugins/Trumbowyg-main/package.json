@@ -1,0 +1,64 @@
+{
+  "name": "trumbowyg",
+  "title": "Trumbowyg",
+  "description": "A lightweight WYSIWYG editor",
+  "version": "2.27.3",
+  "main": "dist/trumbowyg.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build",
+    "clean": "gulp clean",
+    "test": "gulp test"
+  },
+  "devDependencies": {
+    "del": "7.0.0",
+    "gulp": "4.0.2",
+    "gulp-autoprefixer": "8.0.0",
+    "gulp-clean-css": "4.3.0",
+    "gulp-concat": "2.6.1",
+    "gulp-header": "2.0.9",
+    "gulp-jshint": "2.1.0",
+    "gulp-livereload": "4.0.2",
+    "gulp-newer": "1.4.0",
+    "gulp-rename": "2.0.0",
+    "gulp-sass": "5.1.0",
+    "gulp-size": "4.0.1",
+    "gulp-sourcemaps": "3.0.0",
+    "gulp-svgmin": "4.1.0",
+    "gulp-svgstore": "9.0.0",
+    "gulp-terser": "2.1.0",
+    "jquery": "^3.6.2",
+    "jshint": "2.13.6",
+    "jshint-stylish": "2.2.1",
+    "sass": "^1.57.1",
+    "vinyl-paths": "5.0.0"
+  },
+  "peerDependencies": {
+    "jquery": ">=1.8"
+  },
+  "homepage": "https://alex-d.github.io/Trumbowyg/",
+  "author": {
+    "name": "Alexandre Demode (Alex-D)",
+    "email": "contact@alex-d.fr",
+    "url": "https://alex-d.fr"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Alex-D/Trumbowyg.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Alex-D/Trumbowyg/issues"
+  },
+  "keywords": [
+    "wysiwyg",
+    "editor",
+    "rich text",
+    "contenteditable",
+    "trumbowyg"
+  ],
+  "volta": {
+    "node": "18.12.1",
+    "npm": "9.3.0"
+  }
+}
